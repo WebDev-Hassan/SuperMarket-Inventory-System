@@ -145,8 +145,8 @@ namespace SuperMarket_Inventory_System
             this.LoginGradientPanel.Controls.Add(this.pictureBox1);
             this.LoginGradientPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.LoginGradientPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
-            this.LoginGradientPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(0)))), ((int)(((byte)(224)))));
-            this.LoginGradientPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(0)))), ((int)(((byte)(224)))));
+            this.LoginGradientPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
+            this.LoginGradientPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
             this.LoginGradientPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
             this.LoginGradientPanel.Location = new System.Drawing.Point(0, 0);
             this.LoginGradientPanel.Name = "LoginGradientPanel";
@@ -198,7 +198,7 @@ namespace SuperMarket_Inventory_System
             stateProperties29.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             stateProperties29.BorderThickness = 2;
             stateProperties29.FillColor = System.Drawing.Color.White;
-            stateProperties29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(0)))), ((int)(((byte)(224)))));
+            stateProperties29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
             stateProperties29.IconLeftImage = null;
             stateProperties29.IconRightImage = null;
             this.btn_SignInPage.onHoverState = stateProperties29;
@@ -262,7 +262,7 @@ namespace SuperMarket_Inventory_System
             stateProperties31.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             stateProperties31.BorderThickness = 2;
             stateProperties31.FillColor = System.Drawing.Color.White;
-            stateProperties31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(0)))), ((int)(((byte)(224)))));
+            stateProperties31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
             stateProperties31.IconLeftImage = null;
             stateProperties31.IconRightImage = null;
             this.btn_SignUpPage.onHoverState = stateProperties31;

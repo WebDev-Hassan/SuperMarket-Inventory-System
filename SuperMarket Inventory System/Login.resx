@@ -321,10 +321,8 @@
   <data name="LoginGradientPanel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC4SURBVChTfc47D8FQHIbx/2y3m5nNzOISlwpFWjQuNZuZ
-        7WZmu5nZp6D3i+/wOqep5qQa+y9PHhrpDiZbF8reg3rwMDv60E4+FpcAy2uI9S3E5vEGyaqDsYCnDM85
-        PgcRXjGs3xkcSDZkxUZS3rkRFsscU79mgeMhK4s4vUG9qoVMLD6zDeqWTUgVM8F8I3mON/gztYsGOBbL
-        Wc/UKhjguJPC6Q1q5F+IcMn8i6mee6L5xfHG77ODDz0fCsQ18+EbAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYSURBVChTY8i9+vY/MXhUIV5MbYVv/wMAVdg+CBtwpBkA
+        AAAASUVORK5CYII=
 </value>
   </data>
   <data name="btn_SignInPage.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
