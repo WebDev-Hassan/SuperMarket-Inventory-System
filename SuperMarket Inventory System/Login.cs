@@ -33,10 +33,6 @@ namespace SuperMarket_Inventory_System
             LoginPages.SetPage(1);
         }
         #endregion
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
 
     }
 }
