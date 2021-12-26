@@ -339,10 +339,10 @@ namespace SuperMarket_Inventory_System
             this.LoginPages.Location = new System.Drawing.Point(463, 0);
             this.LoginPages.Multiline = true;
             this.LoginPages.Name = "LoginPages";
-            this.LoginPages.Page = this.SignUp;
-            this.LoginPages.PageIndex = 1;
-            this.LoginPages.PageName = "SignUp";
-            this.LoginPages.PageTitle = "SignUp";
+            this.LoginPages.Page = this.SignIn;
+            this.LoginPages.PageIndex = 0;
+            this.LoginPages.PageName = "SignIn";
+            this.LoginPages.PageTitle = "SignIn";
             this.LoginPages.SelectedIndex = 0;
             this.LoginPages.Size = new System.Drawing.Size(526, 544);
             this.LoginPages.TabIndex = 1;
@@ -457,7 +457,7 @@ namespace SuperMarket_Inventory_System
             this.bunifuTextBox1.SelectionLength = 0;
             this.bunifuTextBox1.SelectionStart = 0;
             this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(413, 46);
+            this.bunifuTextBox1.Size = new System.Drawing.Size(413, 44);
             this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox1.TabIndex = 8;
             this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
