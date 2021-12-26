@@ -341,10 +341,10 @@ namespace SuperMarket_Inventory_System
             this.LoginPages.Location = new System.Drawing.Point(463, 0);
             this.LoginPages.Multiline = true;
             this.LoginPages.Name = "LoginPages";
-            this.LoginPages.Page = this.SignIn;
-            this.LoginPages.PageIndex = 0;
-            this.LoginPages.PageName = "SignIn";
-            this.LoginPages.PageTitle = "SignIn";
+            this.LoginPages.Page = this.SignUp;
+            this.LoginPages.PageIndex = 1;
+            this.LoginPages.PageName = "SignUp";
+            this.LoginPages.PageTitle = "SignUp";
             this.LoginPages.SelectedIndex = 0;
             this.LoginPages.Size = new System.Drawing.Size(526, 544);
             this.LoginPages.TabIndex = 1;
@@ -971,11 +971,11 @@ namespace SuperMarket_Inventory_System
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
-            this.label4.Location = new System.Drawing.Point(68, 35);
+            this.label4.Location = new System.Drawing.Point(97, 35);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(388, 44);
+            this.label4.Size = new System.Drawing.Size(327, 44);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Login to your account";
+            this.label4.Text = "Create an account";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Login

@@ -60,7 +60,7 @@ namespace SuperMarket_Inventory_System
                 try
                 {
                     User user = BL.SignIn(u);
-                    var Dashboard = new Dashboard(u);
+                    var Dashboard = new Dashboard(user);
                     this.Visible = false;
                     Dashboard.Visible = true;
                 }
