@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31829.152
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperMarket Inventory System", "SuperMarket Inventory System\SuperMarket Inventory System.csproj", "{3302CEC9-CAEB-418C-B992-7514511FC868}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{797CED9F-12E4-4BDF-9A3D-45F0B06AC515}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{8E825675-C28D-49C1-93CE-5CE9608E6EA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3302CEC9-CAEB-418C-B992-7514511FC868}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3302CEC9-CAEB-418C-B992-7514511FC868}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3302CEC9-CAEB-418C-B992-7514511FC868}.Release|Any CPU.Build.0 = Release|Any CPU
+		{797CED9F-12E4-4BDF-9A3D-45F0B06AC515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{797CED9F-12E4-4BDF-9A3D-45F0B06AC515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{797CED9F-12E4-4BDF-9A3D-45F0B06AC515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{797CED9F-12E4-4BDF-9A3D-45F0B06AC515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E825675-C28D-49C1-93CE-5CE9608E6EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E825675-C28D-49C1-93CE-5CE9608E6EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E825675-C28D-49C1-93CE-5CE9608E6EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E825675-C28D-49C1-93CE-5CE9608E6EA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
