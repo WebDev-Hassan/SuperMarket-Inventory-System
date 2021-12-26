@@ -239,11 +239,11 @@ namespace SuperMarket_Inventory_System
             stateProperties31.IconLeftImage = null;
             stateProperties31.IconRightImage = null;
             this.bunifuButton2.onHoverState = stateProperties31;
-            stateProperties32.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties32.BorderColor = System.Drawing.Color.White;
             stateProperties32.BorderRadius = 35;
             stateProperties32.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             stateProperties32.BorderThickness = 2;
-            stateProperties32.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties32.FillColor = System.Drawing.Color.Transparent;
             stateProperties32.ForeColor = System.Drawing.Color.White;
             stateProperties32.IconLeftImage = null;
             stateProperties32.IconRightImage = null;
@@ -339,10 +339,10 @@ namespace SuperMarket_Inventory_System
             this.LoginPages.Location = new System.Drawing.Point(463, 0);
             this.LoginPages.Multiline = true;
             this.LoginPages.Name = "LoginPages";
-            this.LoginPages.Page = this.SignIn;
-            this.LoginPages.PageIndex = 0;
-            this.LoginPages.PageName = "SignIn";
-            this.LoginPages.PageTitle = "SignIn";
+            this.LoginPages.Page = this.SignUp;
+            this.LoginPages.PageIndex = 1;
+            this.LoginPages.PageName = "SignUp";
+            this.LoginPages.PageTitle = "SignUp";
             this.LoginPages.SelectedIndex = 0;
             this.LoginPages.Size = new System.Drawing.Size(526, 544);
             this.LoginPages.TabIndex = 1;
@@ -802,7 +802,7 @@ namespace SuperMarket_Inventory_System
             this.bunifuTextBox4.SelectionLength = 0;
             this.bunifuTextBox4.SelectionStart = 0;
             this.bunifuTextBox4.ShortcutsEnabled = true;
-            this.bunifuTextBox4.Size = new System.Drawing.Size(413, 46);
+            this.bunifuTextBox4.Size = new System.Drawing.Size(413, 44);
             this.bunifuTextBox4.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox4.TabIndex = 12;
             this.bunifuTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;

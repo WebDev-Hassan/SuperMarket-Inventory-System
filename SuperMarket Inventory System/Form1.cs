@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace SuperMarket_Inventory_System
 {
-    public partial class Login : Form
+    public partial class Form1 : Form
     {
-        public Login()
+        public Form1()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
