@@ -15,17 +15,28 @@ namespace SuperMarket_Inventory_System
         public Login()
         {
             InitializeComponent();
+            // Drag Events
+            LoginDock.SubscribeControlToDragEvents(LoginGradientPanel);
+            LoginDock.SubscribeControlToDragEvents(SignIn);
+            LoginDock.SubscribeControlToDragEvents(SignUp);
+
+            // Shows the Form on the Center of the Screen
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-
-        private void tabPage1_Click(object sender, EventArgs e)
+        #region SignUp / Login Page Navigation
+        private void btn_SignInPage_Click(object sender, EventArgs e)
         {
-
+            LoginPages.SetPage(0);
         }
-
+        private void btn_SignUpPage_Click_1(object sender, EventArgs e)
+        {
+            LoginPages.SetPage(1);
+        }
+        #endregion
         private void Login_Load(object sender, EventArgs e)
         {
 
         }
+
     }
 }
