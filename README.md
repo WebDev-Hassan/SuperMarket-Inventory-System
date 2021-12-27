@@ -16,7 +16,7 @@ It's a semester project that I'm gonna present before Feburary.
 ## 💭 Things to add
 
 - Make a dashboard (High Priority)
-- More secure signup (High Priority)
+- More secure signup (High Priority) - Done Dec 27
 
 
 ## Screenshots
