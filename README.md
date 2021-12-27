@@ -15,9 +15,10 @@ It's a semester project that I'm gonna present before Feburary.
 - Employees (Coming Soon)
 ## 💭 Things to add
 
-- Make a dashboard (High Priority)
-- More secure signup (High Priority) - Done Dec 27
-- Make a Splash Screen (High Priority) - Done Dec 27
+- Make a dashboard 👍
+- Make Product Listings ⭕
+- More secure signup - ✅ Dec 27
+- Make a Splash Screen - ✅ Dec 27
 
 
 ## Screenshots
