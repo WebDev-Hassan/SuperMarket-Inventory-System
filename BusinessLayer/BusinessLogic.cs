@@ -15,6 +15,7 @@ namespace BusinessLayer
         SqlDataReader sdr;
 
         #region SignUp Functions
+        // Inserts Unique Accounts
         public User SignUp(User i)
         {
             try
@@ -36,25 +37,12 @@ namespace BusinessLayer
             }
 
         }
+        // Checks any Matching Email and return boolean - Match = false else True
         private bool SignUp_checkAccount(User i)
         {
             try
             {
-                var UserList = new List<User>();
-                query = @"Select * from Users";
-                sdr = db.GetReader(query);
-
-                // Storing Users in UserList
-                while (sdr.Read())
-                {
-                    User user = new User();
-                    user.ID = int.Parse(sdr[0].ToString());
-                    user.Name = sdr[1].ToString();
-                    user.Email = sdr[2].ToString();
-                    user.Password = sdr[3].ToString();
-                    UserList.Add(user);
-                }
-                CloseReader();
+                var UserList = GetAllbyEmail(i);
 
                 // Checking any Matching Emails
                 foreach (var u in UserList)
@@ -76,53 +64,19 @@ namespace BusinessLayer
         #endregion
 
         #region SignIn Functions
+        // Only returns the User
         public User SignIn(User i)
         {
             return SignIn_checkAccount(i);
-
-            //if (SignIn_checkAccount(i))
-            //{
-            //    query = @"Select * from Users where Email='" + i.Email + "' AND Password='" + i.Password + "'";
-            //    sdr = db.GetReader(query);
-
-            //    if (sdr.Read())
-            //    {
-            //        user = new User();
-            //        user.ID = int.Parse(sdr[0].ToString());
-            //        user.Name = sdr[1].ToString();
-            //        user.Email = sdr[2].ToString();
-            //        user.Password = sdr[3].ToString();
-            //        sdr.Close();
-            //        db.CloseConnection();
-            //        return user;
-            //    }
-            //}
-            //return null;
-
         }
 
+        // Check Accounts and return User from the database
         private User SignIn_checkAccount(User i)
         {
             try
             {
-                var UserList = new List<User>();
-                //Efficient Query
-                query = @"Select * from Users where Email = '"+i.Email+"'";
-                //query = @"Select * from Users ";
-                sdr = db.GetReader(query);
-
-                // Storing Users in UserList
-                while (sdr.Read())
-                {
-                    User user = new User();
-                    user.ID = int.Parse(sdr[0].ToString());
-                    user.Name = sdr[1].ToString();
-                    user.Email = sdr[2].ToString();
-                    user.Password = sdr[3].ToString();
-                    UserList.Add(user);
-                }
-                CloseReader();
-
+                var UserList = GetAllbyEmail(i);
+                
                 // Checking any Matching Emails
                 foreach (var u in UserList)
                 {
@@ -150,6 +104,36 @@ namespace BusinessLayer
         {
             sdr.Close();
             db.CloseConnection();
+        }
+
+        // Returns List of Users having same Emails
+        public List<User> GetAllbyEmail(User i)
+        {
+            try
+            {
+                var UserList = new List<User>();
+                //Efficient Query
+                query = @"Select * from Users where Email = '" + i.Email + "'";
+                //query = @"Select * from Users ";
+                sdr = db.GetReader(query);
+
+                // Storing Users in UserList
+                while (sdr.Read())
+                {
+                    User user = new User();
+                    user.ID = int.Parse(sdr[0].ToString());
+                    user.Name = sdr[1].ToString();
+                    user.Email = sdr[2].ToString();
+                    user.Password = sdr[3].ToString();
+                    UserList.Add(user);
+                }
+                CloseReader();
+                return UserList;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         #endregion
