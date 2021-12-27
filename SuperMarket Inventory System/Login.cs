@@ -60,9 +60,16 @@ namespace SuperMarket_Inventory_System
                 try
                 {
                     User user = BL.SignIn(u);
-                    var Dashboard = new Dashboard(user);
-                    this.Visible = false;
-                    Dashboard.Visible = true;
+                    if (user != null)
+                    {
+                        var Dashboard = new Dashboard(user);
+                        this.Visible = false;
+                        Dashboard.Visible = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Account not Found");
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -101,9 +108,9 @@ namespace SuperMarket_Inventory_System
             {
                 User u = new User(name, email, password);
                 string message = BL.SignUp(u);
-                if (message != "Success")
+                if (message == "Successful")
                 {
-                    var Dashboard = new Dashboard(user);
+                    var Dashboard = new Dashboard(u);
                     this.Visible = false;
                     Dashboard.Visible = true;
                 }

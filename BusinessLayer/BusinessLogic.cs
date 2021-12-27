@@ -14,6 +14,7 @@ namespace BusinessLayer
         private string query;
         SqlDataReader sdr;
 
+        #region SignUp Functions
         public string SignUp(User i)
         {
             try
@@ -26,7 +27,7 @@ namespace BusinessLayer
                 }
                 else
                 {
-                    throw new Exception("Unsuccessful");
+                    return "Account Already Exists";
                 }
             }
             catch (Exception ex)
@@ -40,8 +41,9 @@ namespace BusinessLayer
             try
             {
                 var UserList = new List<User>();
-                query = @"Select * from Users where Email='" + i.Email + "'";
+                query = @"Select * from Users";
                 sdr = db.GetReader(query);
+
                 // Storing Users in UserList
                 while (sdr.Read())
                 {
@@ -52,10 +54,12 @@ namespace BusinessLayer
                     user.Password = sdr[3].ToString();
                     UserList.Add(user);
                 }
+                CloseReader();
+
                 // Checking any Matching Emails
                 foreach (var u in UserList)
                 {
-                    if (i.Email.Equals(u.Email))
+                    if (i.Email == u.Email)
                     {
                         return false;
                     }
@@ -65,11 +69,13 @@ namespace BusinessLayer
             }
             catch (Exception)
             {
-
                 return false;
             }
             
         }
+        #endregion
+
+        #region SignIn Functions
         public User SignIn(User i)
         {
             User user;
@@ -91,6 +97,10 @@ namespace BusinessLayer
 
             return null;
         }
+        #endregion
+
+
+        #region Utility Functions
 
         // For Closing the Reader & Connection after SignIn (Ignore this for now)
         public void CloseReader()
@@ -98,5 +108,7 @@ namespace BusinessLayer
             sdr.Close();
             db.CloseConnection();
         }
+
+        #endregion
     }
 }
