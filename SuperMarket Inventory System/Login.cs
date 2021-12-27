@@ -69,6 +69,7 @@ namespace SuperMarket_Inventory_System
                     else
                     {
                         MessageBox.Show("Account not Found");
+                        ClearSignInFields();
                     }
                 }
                 catch (Exception ex)
@@ -107,16 +108,17 @@ namespace SuperMarket_Inventory_System
             if (ValidateRegistrationFields())
             {
                 User u = new User(name, email, password);
-                string message = BL.SignUp(u);
-                if (message == "Successful")
+                User user = BL.SignUp(u);
+                if (user != null)
                 {
-                    var Dashboard = new Dashboard(u);
+                    var Dashboard = new Dashboard(user);
                     this.Visible = false;
                     Dashboard.Visible = true;
                 }
                 else
                 {
-                    MessageBox.Show(message);
+                    MessageBox.Show("Account Already Exists");
+                    ClearSignUpFields();
                 }
             }
         }
@@ -170,6 +172,22 @@ namespace SuperMarket_Inventory_System
         private void txt_SignInPassword_KeyUp(object sender, KeyEventArgs e)
         {
             txt_SignInPassword.UseSystemPasswordChar = true;
+        }
+        #endregion
+
+        #region Utility Functions
+
+        public void ClearSignUpFields()
+        {
+            txt_SignUpName.Text = "";
+            txt_SignUpEmail.Text = "";
+            txt_SignUpPassword.Text = "";
+            txt_SignUpConfirmPassword.Text = "";
+        }
+        public void ClearSignInFields()
+        {
+            txt_SignInEmail.Text = "";
+            txt_SignInPassword.Text = "";
         }
         #endregion
     }

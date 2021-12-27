@@ -15,28 +15,28 @@ namespace BusinessLayer
         SqlDataReader sdr;
 
         #region SignUp Functions
-        public string SignUp(User i)
+        public User SignUp(User i)
         {
             try
             {
-                if (checkAccount(i))
+                if (SignUp_checkAccount(i))
                 {
                     query = @"Insert into Users Values('" + i.Name + "','" + i.Email + "','" + i.Password + "')";
                     db.IDU(query);
-                    return "Successful";
+                    return SignIn(i);
                 }
                 else
                 {
-                    return "Account Already Exists";
+                    return null;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return ex.Message;
+                return null;
             }
 
         }
-        private bool checkAccount(User i)   
+        private bool SignUp_checkAccount(User i)
         {
             try
             {
@@ -71,31 +71,74 @@ namespace BusinessLayer
             {
                 return false;
             }
-            
+
         }
         #endregion
 
         #region SignIn Functions
         public User SignIn(User i)
         {
-            User user;
-            query = @"Select * from Users where Email='" + i.Email + "' AND Password='" + i.Password + "'";
+            return SignIn_checkAccount(i);
 
-            sdr = db.GetReader(query);
+            //if (SignIn_checkAccount(i))
+            //{
+            //    query = @"Select * from Users where Email='" + i.Email + "' AND Password='" + i.Password + "'";
+            //    sdr = db.GetReader(query);
 
-            if (sdr.Read())
+            //    if (sdr.Read())
+            //    {
+            //        user = new User();
+            //        user.ID = int.Parse(sdr[0].ToString());
+            //        user.Name = sdr[1].ToString();
+            //        user.Email = sdr[2].ToString();
+            //        user.Password = sdr[3].ToString();
+            //        sdr.Close();
+            //        db.CloseConnection();
+            //        return user;
+            //    }
+            //}
+            //return null;
+
+        }
+
+        private User SignIn_checkAccount(User i)
+        {
+            try
             {
-                user = new User();
-                user.ID = int.Parse(sdr[0].ToString());
-                user.Name = sdr[1].ToString();
-                user.Email = sdr[2].ToString();
-                user.Password = sdr[3].ToString();
-                sdr.Close();
-                db.CloseConnection();
-                return user;
+                var UserList = new List<User>();
+                //Efficient Query
+                query = @"Select * from Users where Email = '"+i.Email+"'";
+                //query = @"Select * from Users ";
+                sdr = db.GetReader(query);
+
+                // Storing Users in UserList
+                while (sdr.Read())
+                {
+                    User user = new User();
+                    user.ID = int.Parse(sdr[0].ToString());
+                    user.Name = sdr[1].ToString();
+                    user.Email = sdr[2].ToString();
+                    user.Password = sdr[3].ToString();
+                    UserList.Add(user);
+                }
+                CloseReader();
+
+                // Checking any Matching Emails
+                foreach (var u in UserList)
+                {
+                    if (i.Email == u.Email)
+                    {
+                        return u;
+                    }
+                }
+
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
             }
 
-            return null;
         }
         #endregion
 
