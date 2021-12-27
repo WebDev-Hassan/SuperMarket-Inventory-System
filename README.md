@@ -23,6 +23,7 @@ It's a semester project that I'm gonna present before Feburary.
 
 ## Screenshots
 
+[![image.png](https://i.postimg.cc/GtMjWK5h/image.png)](https://postimg.cc/q63nnsr9)
 [![image.png](https://i.postimg.cc/nrH1Vs8S/image.png)](https://postimg.cc/9Rn9JQQy)
 [![image.png](https://i.postimg.cc/gcQJPCv8/image.png)](https://postimg.cc/4nvZ6F2x)
 
