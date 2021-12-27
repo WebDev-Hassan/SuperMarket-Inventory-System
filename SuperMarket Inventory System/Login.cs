@@ -130,6 +130,12 @@ namespace SuperMarket_Inventory_System
             this.password = txt_SignUpPassword.Text;
             this.confirmpassword = txt_SignUpConfirmPassword.Text;
 
+            // Checking Name
+            if (name == null)
+            {
+                MessageBox.Show("Please type a name");
+            }
+
             // Email Validation
             if (!Regex.IsMatch(email, EmailPattern))
             {
