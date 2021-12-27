@@ -100,10 +100,17 @@ namespace SuperMarket_Inventory_System
             if (ValidateRegistrationFields())
             {
                 User u = new User(name, email, password);
-                BL.SignUp(u);
-                var Dashboard = new Dashboard(u);
-                this.Visible = false;
-                Dashboard.Visible = true;
+                string message = BL.SignUp(u);
+                if (message != "Success")
+                {
+                    var Dashboard = new Dashboard(user);
+                    this.Visible = false;
+                    Dashboard.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show(message);
+                }
             }
         }
         // Validation of SignUp Fields
