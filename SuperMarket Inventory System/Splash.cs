@@ -20,8 +20,6 @@ namespace SuperMarket_Inventory_System
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int progress = 0;
-
             if (bunifuProgressBar1.Value < 100)
             {
                 bunifuProgressBar1.Value += 10;
