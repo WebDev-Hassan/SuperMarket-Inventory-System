@@ -51,5 +51,17 @@ namespace SuperMarket_Inventory_System
         {
 
         }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            DashboardPages.SetPage(0);
+            btn_dashboard.selected = true;
+            btn_exit.selected = false;
+        }
     }
 }

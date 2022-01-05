@@ -1309,6 +1309,28 @@
   <metadata name="Method.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="bunifuButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAANIAAAAtCAYAAADbXTWOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEESURBVHhe7dMxSgNRGIXRtxSX4grSh4SQ7n9TKSGuyjpg
+        ZekyZgPauILRgWmEQQa95blwutt+zcxCq6q7a+/PwzBMwDbfzdzmdpaMWrtWvb6cz9O03wMbvZ1O06Vq
+        XDJqba5r7Qj8bm5nyUhI8FdCggAhQYCQIEBIECAkCBASBAgJAoQEAUKCACFBgJAgQEgQICQIEBIECAkC
+        hAQBQoIAIUGAkCBASBAgJAgQEgQICQKEBAFCggAhQYCQIEBIECAkCBASBAgJAoQEAUKCACFBgJAgQEgQ
+        ICQI+BHSpWocj8fVI7Du43CYHqo+l4xaq6r7x97f57qAbeaInnrfLRmZ2f/W2hdwLf/snud7UwAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAANIAAAAtCAYAAADbXTWOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAESSURBVHhe7dMhTsRgFIXRfyksBQwCQUhmDdM/pQ0ddoDA
+        IVBYLAJNcGQ2wBZmAyhWUGhSQ9KQBq48Nznm5dmvmFlotdaj/rp5btt2BNbpd9uXqZ05o1K+D283j5vx
+        4f0EWOn26WLshuYwZ1TKVNfSI/C7qZ05IyHBXwkJAoQEAUKCACFBgJAgQEgQICQIEBIECAkChAQBQoIA
+        IUGAkCBASBAgJAgQEgQICQKEBAFCggAhQYCQIEBIECAkCBASBAgJAoQEAUKCACFBgJAgQEgQICQIEBIE
+        CAkChAQBQoIAIUGAkCDgR0jd0BzuXs8WH4Fl9/vT8bJvPueMSqm1HndX9WOqC1hnimgYtudzRmb2v5Xy
+        BQPRMgOOtBK8AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="animation1.BlindCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
