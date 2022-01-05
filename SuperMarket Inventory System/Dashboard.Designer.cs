@@ -30,10 +30,16 @@ namespace SuperMarket_Inventory_System
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation2 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_dashboard = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -49,18 +55,41 @@ namespace SuperMarket_Inventory_System
             this.DashboardProfile = new System.Windows.Forms.TabPage();
             this.DashboardExit = new System.Windows.Forms.TabPage();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btn_transactions = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.ID = new System.Windows.Forms.DataGridViewButtonColumn();
             this.TITLE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Actions = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_transactions = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuDataGridView2 = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bunifuDataGridView3 = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Method = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.DashboardPages.SuspendLayout();
             this.DashboardHome.SuspendLayout();
             this.DashboardTransactions.SuspendLayout();
+            this.DashboardProducts.SuspendLayout();
+            this.DashboardReport.SuspendLayout();
+            this.DashboardExit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -69,7 +98,7 @@ namespace SuperMarket_Inventory_System
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(259, 546);
+            this.pictureBox1.Size = new System.Drawing.Size(259, 548);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -190,6 +219,7 @@ namespace SuperMarket_Inventory_System
             this.btn_exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_exit.Textcolor = System.Drawing.Color.Black;
             this.btn_exit.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // bunifuFlatButton6
             // 
@@ -225,6 +255,7 @@ namespace SuperMarket_Inventory_System
             this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton6.Textcolor = System.Drawing.Color.Black;
             this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton6.Click += new System.EventHandler(this.bunifuFlatButton6_Click);
             // 
             // btn_report
             // 
@@ -260,6 +291,7 @@ namespace SuperMarket_Inventory_System
             this.btn_report.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_report.Textcolor = System.Drawing.Color.Black;
             this.btn_report.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_report.Click += new System.EventHandler(this.btn_report_Click);
             // 
             // DashboardPages
             // 
@@ -275,29 +307,29 @@ namespace SuperMarket_Inventory_System
             this.DashboardPages.Location = new System.Drawing.Point(259, 0);
             this.DashboardPages.Multiline = true;
             this.DashboardPages.Name = "DashboardPages";
-            this.DashboardPages.Page = this.DashboardHome;
-            this.DashboardPages.PageIndex = 0;
-            this.DashboardPages.PageName = "DashboardHome";
-            this.DashboardPages.PageTitle = "Dashboard";
+            this.DashboardPages.Page = this.DashboardReport;
+            this.DashboardPages.PageIndex = 2;
+            this.DashboardPages.PageName = "DashboardReport";
+            this.DashboardPages.PageTitle = "Report";
             this.DashboardPages.SelectedIndex = 0;
-            this.DashboardPages.Size = new System.Drawing.Size(719, 546);
+            this.DashboardPages.Size = new System.Drawing.Size(725, 548);
             this.DashboardPages.TabIndex = 9;
-            animation2.AnimateOnlyDifferences = false;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.DashboardPages.Transition = animation2;
+            animation1.AnimateOnlyDifferences = false;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.DashboardPages.Transition = animation1;
             this.DashboardPages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
             // DashboardHome
@@ -307,55 +339,65 @@ namespace SuperMarket_Inventory_System
             this.DashboardHome.Location = new System.Drawing.Point(4, 4);
             this.DashboardHome.Name = "DashboardHome";
             this.DashboardHome.Padding = new System.Windows.Forms.Padding(3);
-            this.DashboardHome.Size = new System.Drawing.Size(711, 520);
+            this.DashboardHome.Size = new System.Drawing.Size(717, 522);
             this.DashboardHome.TabIndex = 0;
             this.DashboardHome.Text = "Dashboard";
             this.DashboardHome.UseVisualStyleBackColor = true;
             // 
             // DashboardTransactions
             // 
-            this.DashboardTransactions.Controls.Add(this.bunifuDataGridView1);
-            this.DashboardTransactions.Controls.Add(this.bunifuCustomLabel3);
+            this.DashboardTransactions.Controls.Add(this.bunifuDataGridView3);
+            this.DashboardTransactions.Controls.Add(this.bunifuCustomLabel6);
             this.DashboardTransactions.Location = new System.Drawing.Point(4, 4);
             this.DashboardTransactions.Name = "DashboardTransactions";
             this.DashboardTransactions.Padding = new System.Windows.Forms.Padding(3);
-            this.DashboardTransactions.Size = new System.Drawing.Size(711, 520);
+            this.DashboardTransactions.Size = new System.Drawing.Size(717, 522);
             this.DashboardTransactions.TabIndex = 1;
             this.DashboardTransactions.Text = "Transactions";
             this.DashboardTransactions.UseVisualStyleBackColor = true;
             // 
             // DashboardProducts
             // 
+            this.DashboardProducts.Controls.Add(this.bunifuDataGridView1);
+            this.DashboardProducts.Controls.Add(this.bunifuCustomLabel3);
             this.DashboardProducts.Location = new System.Drawing.Point(4, 4);
             this.DashboardProducts.Name = "DashboardProducts";
-            this.DashboardProducts.Size = new System.Drawing.Size(711, 520);
+            this.DashboardProducts.Size = new System.Drawing.Size(717, 522);
             this.DashboardProducts.TabIndex = 2;
             this.DashboardProducts.Text = "Products";
             this.DashboardProducts.UseVisualStyleBackColor = true;
             // 
             // DashboardReport
             // 
+            this.DashboardReport.Controls.Add(this.bunifuFlatButton1);
+            this.DashboardReport.Controls.Add(this.bunifuCustomLabel9);
+            this.DashboardReport.Controls.Add(this.bunifuCustomLabel8);
+            this.DashboardReport.Controls.Add(this.bunifuCustomLabel7);
+            this.DashboardReport.Controls.Add(this.bunifuDataGridView2);
+            this.DashboardReport.Controls.Add(this.bunifuCustomLabel5);
             this.DashboardReport.Location = new System.Drawing.Point(4, 4);
             this.DashboardReport.Name = "DashboardReport";
-            this.DashboardReport.Size = new System.Drawing.Size(711, 520);
+            this.DashboardReport.Size = new System.Drawing.Size(717, 522);
             this.DashboardReport.TabIndex = 3;
             this.DashboardReport.Text = "Report";
             this.DashboardReport.UseVisualStyleBackColor = true;
+            this.DashboardReport.Click += new System.EventHandler(this.DashboardReport_Click);
             // 
             // DashboardProfile
             // 
             this.DashboardProfile.Location = new System.Drawing.Point(4, 4);
             this.DashboardProfile.Name = "DashboardProfile";
-            this.DashboardProfile.Size = new System.Drawing.Size(711, 520);
+            this.DashboardProfile.Size = new System.Drawing.Size(717, 522);
             this.DashboardProfile.TabIndex = 4;
             this.DashboardProfile.Text = "Profile";
             this.DashboardProfile.UseVisualStyleBackColor = true;
             // 
             // DashboardExit
             // 
+            this.DashboardExit.Controls.Add(this.bunifuCustomLabel4);
             this.DashboardExit.Location = new System.Drawing.Point(4, 4);
             this.DashboardExit.Name = "DashboardExit";
-            this.DashboardExit.Size = new System.Drawing.Size(711, 520);
+            this.DashboardExit.Size = new System.Drawing.Size(717, 522);
             this.DashboardExit.TabIndex = 5;
             this.DashboardExit.Text = "Exit";
             this.DashboardExit.UseVisualStyleBackColor = true;
@@ -370,36 +412,62 @@ namespace SuperMarket_Inventory_System
             this.bunifuCustomLabel2.Text = "WELCOME TO SUPERMARKET INVENTORY SYSTEM";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel3
+            // btn_transactions
             // 
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Montserrat", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(3, 10);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(705, 65);
-            this.bunifuCustomLabel3.TabIndex = 1;
-            this.bunifuCustomLabel3.Text = "INVENTORY LIST";
-            this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_transactions.Active = false;
+            this.btn_transactions.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
+            this.btn_transactions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(255)))), ((int)(((byte)(233)))));
+            this.btn_transactions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_transactions.BorderRadius = 7;
+            this.btn_transactions.ButtonText = "          Transactions";
+            this.btn_transactions.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_transactions.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_transactions.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_transactions.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_transactions.Iconimage")));
+            this.btn_transactions.Iconimage_right = null;
+            this.btn_transactions.Iconimage_right_Selected = null;
+            this.btn_transactions.Iconimage_Selected = null;
+            this.btn_transactions.IconMarginLeft = 0;
+            this.btn_transactions.IconMarginRight = 0;
+            this.btn_transactions.IconRightVisible = true;
+            this.btn_transactions.IconRightZoom = 0D;
+            this.btn_transactions.IconVisible = true;
+            this.btn_transactions.IconZoom = 40D;
+            this.btn_transactions.IsTab = true;
+            this.btn_transactions.Location = new System.Drawing.Point(17, 310);
+            this.btn_transactions.Name = "btn_transactions";
+            this.btn_transactions.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(255)))), ((int)(((byte)(233)))));
+            this.btn_transactions.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(203)))), ((int)(((byte)(227)))));
+            this.btn_transactions.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_transactions.selected = false;
+            this.btn_transactions.Size = new System.Drawing.Size(229, 48);
+            this.btn_transactions.TabIndex = 13;
+            this.btn_transactions.Text = "          Transactions";
+            this.btn_transactions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_transactions.Textcolor = System.Drawing.Color.Black;
+            this.btn_transactions.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_transactions.Click += new System.EventHandler(this.btn_transactions_Click);
             // 
             // bunifuDataGridView1
             // 
             this.bunifuDataGridView1.AllowCustomTheming = false;
             this.bunifuDataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bunifuDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.bunifuDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.bunifuDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.bunifuDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.bunifuDataGridView1.ColumnHeadersHeight = 40;
             this.bunifuDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.TITLE,
@@ -421,27 +489,27 @@ namespace SuperMarket_Inventory_System
             this.bunifuDataGridView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(9, 105);
+            this.bunifuDataGridView1.Location = new System.Drawing.Point(9, 103);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
             this.bunifuDataGridView1.ReadOnly = true;
             this.bunifuDataGridView1.RowHeadersVisible = false;
             this.bunifuDataGridView1.RowTemplate.Height = 40;
             this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(687, 409);
-            this.bunifuDataGridView1.TabIndex = 2;
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(699, 409);
+            this.bunifuDataGridView1.TabIndex = 4;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // ID
@@ -478,47 +546,320 @@ namespace SuperMarket_Inventory_System
             this.Actions.Name = "Actions";
             this.Actions.ReadOnly = true;
             // 
-            // btn_transactions
+            // bunifuCustomLabel3
             // 
-            this.btn_transactions.Active = false;
-            this.btn_transactions.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
-            this.btn_transactions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(255)))), ((int)(((byte)(233)))));
-            this.btn_transactions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_transactions.BorderRadius = 7;
-            this.btn_transactions.ButtonText = "          Transactions";
-            this.btn_transactions.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_transactions.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_transactions.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_transactions.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_transactions.Iconimage")));
-            this.btn_transactions.Iconimage_right = null;
-            this.btn_transactions.Iconimage_right_Selected = null;
-            this.btn_transactions.Iconimage_Selected = null;
-            this.btn_transactions.IconMarginLeft = 0;
-            this.btn_transactions.IconMarginRight = 0;
-            this.btn_transactions.IconRightVisible = true;
-            this.btn_transactions.IconRightZoom = 0D;
-            this.btn_transactions.IconVisible = true;
-            this.btn_transactions.IconZoom = 40D;
-            this.btn_transactions.IsTab = true;
-            this.btn_transactions.Location = new System.Drawing.Point(17, 310);
-            this.btn_transactions.Name = "btn_transactions";
-            this.btn_transactions.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(255)))), ((int)(((byte)(233)))));
-            this.btn_transactions.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(203)))), ((int)(((byte)(227)))));
-            this.btn_transactions.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_transactions.selected = false;
-            this.btn_transactions.Size = new System.Drawing.Size(229, 48);
-            this.btn_transactions.TabIndex = 13;
-            this.btn_transactions.Text = "          Transactions";
-            this.btn_transactions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_transactions.Textcolor = System.Drawing.Color.Black;
-            this.btn_transactions.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Montserrat", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(3, 8);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(705, 65);
+            this.bunifuCustomLabel3.TabIndex = 3;
+            this.bunifuCustomLabel3.Text = "PRODUCTS LIST";
+            this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuCustomLabel4
+            // 
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Montserrat", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(2, 149);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(705, 65);
+            this.bunifuCustomLabel4.TabIndex = 4;
+            this.bunifuCustomLabel4.Text = "INVENTORY LIST";
+            this.bunifuCustomLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuDataGridView2
+            // 
+            this.bunifuDataGridView2.AllowCustomTheming = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.bunifuDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bunifuDataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bunifuDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.bunifuDataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.bunifuDataGridView2.ColumnHeadersHeight = 40;
+            this.bunifuDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewButtonColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.Discount});
+            this.bunifuDataGridView2.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView2.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView2.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView2.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView2.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView2.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.bunifuDataGridView2.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
+            this.bunifuDataGridView2.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
+            this.bunifuDataGridView2.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView2.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView2.CurrentTheme.Name = null;
+            this.bunifuDataGridView2.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.bunifuDataGridView2.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView2.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView2.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView2.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView2.DefaultCellStyle = dataGridViewCellStyle6;
+            this.bunifuDataGridView2.EnableHeadersVisualStyles = false;
+            this.bunifuDataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView2.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
+            this.bunifuDataGridView2.HeaderBgColor = System.Drawing.Color.Empty;
+            this.bunifuDataGridView2.HeaderForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView2.Location = new System.Drawing.Point(12, 96);
+            this.bunifuDataGridView2.Name = "bunifuDataGridView2";
+            this.bunifuDataGridView2.RowHeadersVisible = false;
+            this.bunifuDataGridView2.RowTemplate.Height = 40;
+            this.bunifuDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.bunifuDataGridView2.Size = new System.Drawing.Size(699, 221);
+            this.bunifuDataGridView2.TabIndex = 6;
+            this.bunifuDataGridView2.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Montserrat", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(6, 9);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(705, 65);
+            this.bunifuCustomLabel5.TabIndex = 5;
+            this.bunifuCustomLabel5.Text = "REPORT";
+            this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewButtonColumn1.FillWeight = 101.5228F;
+            this.dataGridViewButtonColumn1.HeaderText = "PRODUCT";
+            this.dataGridViewButtonColumn1.Items.AddRange(new object[] {
+            "Knorr Chicken Noodels",
+            "Basmati Rice 1KG ",
+            "Latif Cooking Oil 1KG"});
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn2.FillWeight = 99.49239F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "QUANTITY";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 111;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn3.FillWeight = 99.49239F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "PRICE";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 75;
+            // 
+            // Discount
+            // 
+            this.Discount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Discount.HeaderText = "DISC (%)";
+            this.Discount.Name = "Discount";
+            this.Discount.Width = 95;
+            // 
+            // bunifuDataGridView3
+            // 
+            this.bunifuDataGridView3.AllowCustomTheming = false;
+            this.bunifuDataGridView3.AllowUserToAddRows = false;
+            this.bunifuDataGridView3.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.bunifuDataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bunifuDataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bunifuDataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.bunifuDataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.bunifuDataGridView3.ColumnHeadersHeight = 40;
+            this.bunifuDataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewButtonColumn2,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.Method});
+            this.bunifuDataGridView3.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView3.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView3.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView3.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView3.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView3.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.bunifuDataGridView3.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView3.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDataGridView3.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView3.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView3.CurrentTheme.Name = null;
+            this.bunifuDataGridView3.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.bunifuDataGridView3.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView3.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView3.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView3.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView3.DefaultCellStyle = dataGridViewCellStyle9;
+            this.bunifuDataGridView3.EnableHeadersVisualStyles = false;
+            this.bunifuDataGridView3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView3.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDataGridView3.HeaderBgColor = System.Drawing.Color.Empty;
+            this.bunifuDataGridView3.HeaderForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView3.Location = new System.Drawing.Point(12, 104);
+            this.bunifuDataGridView3.Name = "bunifuDataGridView3";
+            this.bunifuDataGridView3.ReadOnly = true;
+            this.bunifuDataGridView3.RowHeadersVisible = false;
+            this.bunifuDataGridView3.RowTemplate.Height = 40;
+            this.bunifuDataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.bunifuDataGridView3.Size = new System.Drawing.Size(699, 409);
+            this.bunifuDataGridView3.TabIndex = 6;
+            this.bunifuDataGridView3.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
+            // bunifuCustomLabel6
+            // 
+            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Montserrat", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(6, 9);
+            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(705, 65);
+            this.bunifuCustomLabel6.TabIndex = 5;
+            this.bunifuCustomLabel6.Text = "TRANSACTIONS";
+            this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dataGridViewButtonColumn2
+            // 
+            this.dataGridViewButtonColumn2.FillWeight = 101.5228F;
+            this.dataGridViewButtonColumn2.HeaderText = "Employee";
+            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
+            this.dataGridViewButtonColumn2.ReadOnly = true;
+            this.dataGridViewButtonColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.FillWeight = 99.49239F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Amount";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn4.FillWeight = 99.49239F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Paid";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.FillWeight = 99.49239F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Balance";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // Method
+            // 
+            this.Method.HeaderText = "Method";
+            this.Method.Name = "Method";
+            this.Method.ReadOnly = true;
+            // 
+            // bunifuCustomLabel7
+            // 
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(9, 332);
+            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(183, 65);
+            this.bunifuCustomLabel7.TabIndex = 7;
+            this.bunifuCustomLabel7.Text = "TOTAL :";
+            this.bunifuCustomLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuCustomLabel8
+            // 
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(9, 397);
+            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(183, 65);
+            this.bunifuCustomLabel8.TabIndex = 8;
+            this.bunifuCustomLabel8.Text = "PAID :";
+            this.bunifuCustomLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuCustomLabel9
+            // 
+            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(360, 332);
+            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(183, 65);
+            this.bunifuCustomLabel9.TabIndex = 9;
+            this.bunifuCustomLabel9.Text = "BALANCE : ";
+            this.bunifuCustomLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Active = false;
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 7;
+            this.bunifuFlatButton1.ButtonText = "          Print Bill";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 40D;
+            this.bunifuFlatButton1.IsTab = true;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(365, 400);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(203)))), ((int)(((byte)(227)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(178, 48);
+            this.bunifuFlatButton1.TabIndex = 14;
+            this.bunifuFlatButton1.Text = "          Print Bill";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(978, 546);
+            this.ClientSize = new System.Drawing.Size(984, 548);
             this.Controls.Add(this.DashboardPages);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_transactions);
@@ -537,7 +878,12 @@ namespace SuperMarket_Inventory_System
             this.DashboardPages.ResumeLayout(false);
             this.DashboardHome.ResumeLayout(false);
             this.DashboardTransactions.ResumeLayout(false);
+            this.DashboardProducts.ResumeLayout(false);
+            this.DashboardReport.ResumeLayout(false);
+            this.DashboardExit.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -559,12 +905,30 @@ namespace SuperMarket_Inventory_System
         private System.Windows.Forms.TabPage DashboardProfile;
         private System.Windows.Forms.TabPage DashboardExit;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_transactions;
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
         private System.Windows.Forms.DataGridViewButtonColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TITLE;
         private System.Windows.Forms.DataGridViewTextBoxColumn QUANTITY;
         private System.Windows.Forms.DataGridViewTextBoxColumn Actions;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_transactions;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
+        private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView2;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewButtonColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Discount;
+        private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView3;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Method;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
     }
 }
