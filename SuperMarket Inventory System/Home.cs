@@ -15,24 +15,45 @@ namespace SuperMarket_Inventory_System
         public SidePanel()
         {
             InitializeComponent();
+            // Drag Events
+            //LoginDock.SubscribeControlToDragEvents(LoginGradientPanel);
+            //LoginDock.SubscribeControlToDragEvents(SignIn);
+            //LoginDock.SubscribeControlToDragEvents(SignUp);
+
+            
+
+            // Shows the Form on the Center of the Screen
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+
+        private void b1_Click(object sender, EventArgs e)
         {
 
-            Toggle(sender);
+            //((Bunifu.Framework.UI.BunifuFlatButton)sender).BackColor = Color.Beige;
+            //MessageBox.Show("asd");
         }
 
-        private void Toggle(object sender)
+        private void b6_Click(object sender, EventArgs e)
         {
-            b1.BackColor = Color.FromArgb(33, 147, 25);
-            //b2.BackColor = Color.FromArgb(33, 147, 176);
-            //b3.BackColor = Color.FromArgb(33, 147, 176);
-            //b4.BackColor = Color.FromArgb(33, 147, 176);
-            //b5.BackColor = Color.FromArgb(33, 147, 176);
-            //b6.BackColor = Color.FromArgb(33, 147, 176);
+            CloseApp();
+        }
 
-            //((Bunifu.Framework.UI.BunifuFlatButton)sender).BackColor = Color.FromArgb(33,147,25);
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            CloseApp();
+        }
+        private void CloseApp()
+        {
+            if (MessageBox.Show("Do you want to close this Application", "Close Application", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

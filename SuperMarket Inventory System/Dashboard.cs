@@ -16,15 +16,16 @@ namespace SuperMarket_Inventory_System
         public Dashboard(User u)
         {
             InitializeComponent();
-            label1.Text = u.ID.ToString();
-            label2.Text = u.Name;
-            label3.Text = u.Email;
-            label4.Text = u.Password;
         }
-
-        private void label2_Click(object sender, EventArgs e)
+        private void btn_dashboard_Click(object sender, EventArgs e)
         {
-
+        DashboardPages.SetPage(0);
         }
+
+        private void btn_products_Click(object sender, EventArgs e)
+        {
+        DashboardPages.SetPage(1);
+        }
+
     }
 }
