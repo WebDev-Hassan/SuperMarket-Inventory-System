@@ -13,6 +13,7 @@ namespace SuperMarket_Inventory_System
 {
     public partial class Dashboard : Form
     {
+        BusinessLogic BL = new BusinessLogic();
         public Dashboard(User u)
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace SuperMarket_Inventory_System
         private void btn_products_Click(object sender, EventArgs e)
         {
             DashboardPages.SetPage(1);
+            DisplayProducts();
         }
 
         private void btn_report_Click(object sender, EventArgs e)
@@ -62,6 +64,42 @@ namespace SuperMarket_Inventory_System
             DashboardPages.SetPage(0);
             btn_dashboard.selected = true;
             btn_exit.selected = false;
+        }
+        #region Utilities
+        private void DisplayProducts()
+        {
+            DGV_Products.Rows.Clear();
+            var list = BL.GetAllProducts();
+            foreach (var i in list)
+            {
+                DGV_Products.Rows.Add(i.ID,i.Title,i.Quantity,i.SalePrice,i.PurchasePrice);
+            }
+        }
+        #endregion
+
+        private void DGV_Products_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox8_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

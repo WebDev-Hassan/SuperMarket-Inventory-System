@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using DataAccessLayer;
+using BusinessLayer.Models;
 
 namespace BusinessLayer
 {
@@ -76,7 +77,7 @@ namespace BusinessLayer
             try
             {
                 var UserList = GetAllbyEmail(i);
-                
+
                 // Checking any Matching Emails
                 foreach (var u in UserList)
                 {
@@ -131,6 +132,34 @@ namespace BusinessLayer
                 return UserList;
             }
             catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        //Returns List of Products
+        public List<Product> GetAllProducts()
+        {
+            try
+            {
+                var ProductsList = new List<Product>();
+                query = @"Select * from Products";
+                sdr = db.GetReader(query);
+
+                // Storing Users in UserList
+                while (sdr.Read())
+                {
+                    var product = new Product();
+                    product.ID = int.Parse(sdr[0].ToString());
+                    product.Title = sdr[1].ToString();
+                    product.Quantity = int.Parse(sdr[2].ToString());
+                    product.SalePrice = double.Parse(sdr[3].ToString());
+                    product.PurchasePrice = double.Parse(sdr[3].ToString());
+                }
+                CloseReader();
+                return ProductsList;
+            }
+            catch (Exception ex)
             {
                 return null;
             }
